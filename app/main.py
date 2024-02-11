@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from .models.models import Base
-from .api.routes import router as api_router
-from .database import engine, SessionLocal
+from .main.models.models import Base
+from .main.api.routes import router as api_router
+from .database import engine
 
 Base.metadata.create_all(bind=engine)
 
